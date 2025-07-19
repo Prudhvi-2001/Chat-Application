@@ -1,0 +1,11 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url("https://prestage-ent.jiomeet.com/assets/login-bg-BU_t2ng7.svg");
+  background-size: cover; /* This ensures the background image covers the entire container */
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}

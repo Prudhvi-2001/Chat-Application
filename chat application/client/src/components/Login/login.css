@@ -1,0 +1,77 @@
+.login-container{
+    max-width: 400px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 14px;
+    background: #ffffff;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+}
+.title-section{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.title,
+.message{
+    font-family:"Arial Black", Arial, sans-serif;
+    font-size: 24px;
+}
+.video-icon{
+    width: 50px;
+    height: 50px;
+}
+.message{
+margin-top: 30px;
+}
+.login-section{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login-section input {
+    padding: 14px;
+    font-size: 16px;
+    border: 0.1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out; /* Smooth transition for focus effect */
+}
+.login-section label{
+    font-size: 14px;
+    font-family:sans-serif;
+    color: rgb(90, 90, 90);
+}
+
+.login-section input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect */
+}
+
+.login-section input::placeholder {
+    color: #888; /* Lighter color for placeholders */
+}
+
+.login-section button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth background change */
+}
+
+.login-section button:hover {
+    background-color: #0056b3; /* Darker blue when hovering */
+}
+
+.login-section button:disabled {
+    background-color: #b0c4de; /* Disabled button color */
+    cursor: not-allowed; /* Indicate that the button is disabled */
+}
+

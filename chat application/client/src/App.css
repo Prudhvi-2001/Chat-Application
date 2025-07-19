@@ -1,0 +1,8 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.App{
+  background-image: url('https://prestage-ent.jiomeet.com/assets/login-bg-BU_t2ng7.svg');
+}

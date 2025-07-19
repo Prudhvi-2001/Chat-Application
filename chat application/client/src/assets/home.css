@@ -1,0 +1,375 @@
+.homepage-container{
+  position: relative;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+
+.chat-list {
+  /* width: 0%; */
+  background:#0e001f;
+}
+.video{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: -6px;
+  margin-top: 20px;
+}
+
+.chat-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.chat-item.active {
+  background: #3498db;
+  color: white;
+}
+
+.chat-thread {
+  width: 100%;
+  background: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+}
+.sidebar {
+  width: 50px;
+  background-color: #1b0633;
+  color: white;
+  padding: 20px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+    top: 140px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+}
+
+.icon.active {
+  background-color: rgba(170, 119, 226, 0.2);
+  border-radius: 10px;
+}
+
+.side-border {
+  position: absolute;
+  right: -10px; 
+  height: 30px;
+  width: 4px;
+  background: rgb(170, 119, 226);
+  border-radius: 5px 0 0 5px;
+}
+
+.chat-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.thread-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  width: 300px;
+  cursor: pointer;
+}
+.single-thread{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.thread{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px; 
+}
+
+.initial {
+  text-align: center;
+}
+.title{
+  color: #f2f2f2;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+.last-message{
+  color: #ffffff;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  overflow-y: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.date-header {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: gray;
+}
+
+.msg {
+  max-width: 60%;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.msg-right {
+  align-self: flex-end;
+  background-color: #F7F3FD;
+  color: rgb(90, 90, 90);
+}
+
+.msg-left {
+  align-self: flex-start;
+  background-color:   #f2f2f2  ;
+  color:rgb(90, 90, 90);
+}
+.time-right{
+  align-self: flex-end;
+}
+.time-left{
+  align-self: flex-start;
+}
+.time-right,
+.time-left{
+  font-size: 12px;
+  font-family: sans-serif;
+}
+.msg-time {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 2px;
+}
+
+.msg-content {
+  font-size: 16px;
+}
+.input-box {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 94%;
+  padding: 0 10px;
+  border: 1px solid #cccccc;
+}
+
+.chat-input {
+  width: 100%;
+  max-width: 1100px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* .input-box:focus {
+  border-color: rgb(170, 119, 226);
+} */
+
+.chat-input::placeholder {
+  color: #bbb;
+  font-family: sans-serif;
+}
+
+/* Send Button Styling */
+.send-button {
+  /* background-color: transparent; */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 24px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.send-button svg {
+  transition: transform 0.3s ease;
+}
+
+.send-button:hover svg {
+  transform: scale(1.2);
+}
+.chat-container::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 20px;
+  transition: background-color 0.3s;
+}
+
+.chat-container:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.chat-header{
+  background: #ffffff;
+  border: 1px solid #5a5a5a33;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top-left-radius: 20px;
+}
+.profile-section{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+.profile-title{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.chat-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+    padding: 10px;
+}
+.chat-title{
+  color: #ffffff;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.create-chat{
+  color: #ffffff;
+  cursor: pointer;
+}
+.new-title{
+  color: #0e001f;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.search-input {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  margin-top: 10px;
+}
+
+.search-input input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input input:focus {
+  border: 1px solid  #cccccc;
+}
+.search-results{
+  max-width: 1250px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(90, 90, 90, 0.2);
+  border-radius: 24px;
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  margin-top: 5px;
+}
+.user-results{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.sidebar-profile{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.unread-count{
+  background-color: orange;
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  font-weight: 800;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+}
